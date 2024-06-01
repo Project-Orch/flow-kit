@@ -24,6 +24,7 @@ const config: StorybookConfig = {
       resolve: {
         alias: {
           "@/components": path.resolve(__dirname, "../src/components"),
+          "@/nodes": path.resolve(__dirname, "../src/nodes"),
           "@/styled-system": path.resolve(__dirname, "../styled-system"),
           "@/lib": path.resolve(__dirname, "../src/lib"),
           "@/recipes": path.resolve(__dirname, "../src/recipes"),

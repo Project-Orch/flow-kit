@@ -21,8 +21,9 @@
     "baseUrl": "./",
     "outDir": "./dist",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/components": ["./src/components"],
       "@/styled-system/*": ["./styled-system/*"],
+      "@/nodes": ["./src/nodes"],
       "@/icons/*": ["./src/assets/icons/components/*"]
     }
   },
