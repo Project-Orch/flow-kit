@@ -1,0 +1,7 @@
+@layer reset, base, tokens, recipes, utilities;
+@import url('reactflow/dist/style.css');
+
+.storybook-root {
+  margin: 0;
+  padding: 0;
+}
