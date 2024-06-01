@@ -49,5 +49,7 @@ export const Content = styled("div", {
     bgColor: "neutral.500",
 
     padding: "8px",
+
+    color: "foreground.100",
   },
 });
