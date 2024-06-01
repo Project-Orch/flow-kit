@@ -18,6 +18,7 @@ export const Title = styled("div", {
     fontSize: "0.9rem",
     fontWeight: "bold",
     fontFamily: "default",
+    gap: "4px",
   },
   variants: {
     scheme: {
