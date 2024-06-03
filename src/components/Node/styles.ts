@@ -16,7 +16,7 @@ export const Title = styled("div", {
 
     color: "neutral.600",
     fontSize: "0.9rem",
-    fontWeight: "bold",
+    fontWeight: "medium",
     fontFamily: "default",
     gap: "4px",
   },

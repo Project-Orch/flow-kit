@@ -6,7 +6,7 @@ export const Command = () => {
   return (
     <Node.Root>
       <Node.Title>
-        <TerminalWindow size={20} weight="bold" /> run command
+        <TerminalWindow size={20} weight="regular" /> run command
       </Node.Title>
       <Node.Content>
         <CommandInput w="fit-content" />
