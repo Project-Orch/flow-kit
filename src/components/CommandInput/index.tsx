@@ -27,7 +27,7 @@ export const CommandInput = styled("input", {
     },
 
     px: "0.625rem",
-    h: "2.5rem",
+    h: "2.25rem",
     minW: "4rem",
     fontSize: "sm",
   },
