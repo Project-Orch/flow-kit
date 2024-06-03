@@ -14,7 +14,13 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        fonts: {
+          code: { value: "'Fira Code', monospace" },
+        },
+      },
+    },
   },
   jsxFramework: "react",
 

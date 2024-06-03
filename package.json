@@ -10,8 +10,11 @@
     "generate:css": "panda cssgen --outfile dist/styles.css",
     "build": "npm run prepare && npm run generate:css && tsup ./src/index.tsx --format esm,cjs --dts --external react",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "npm run prepare && storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build && changeset publish"
   },
   "keywords": [
     ""
@@ -19,6 +22,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.27.5",
     "@chromatic-com/storybook": "^1.5.0",
     "@pandacss/dev": "^0.40.1",
     "@storybook/addon-essentials": "^8.1.5",
