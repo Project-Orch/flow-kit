@@ -1,5 +1,6 @@
 import { Node } from "@/components";
 import { TerminalWindow } from "@/icons/TerminalWindow";
+import { CommandInput } from "@/components";
 
 export const Command = () => {
   return (
@@ -7,7 +8,9 @@ export const Command = () => {
       <Node.Title>
         <TerminalWindow size={20} weight="bold" /> run command
       </Node.Title>
-      <Node.Content>Novo</Node.Content>
+      <Node.Content>
+        <CommandInput w="fit-content" />
+      </Node.Content>
     </Node.Root>
   );
 };

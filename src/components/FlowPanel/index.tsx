@@ -1,4 +1,4 @@
-import { Command } from "@/nodes";
+import { Command, orchNodeTypes } from "@/nodes";
 import { useCallback, useMemo, useState } from "react";
 import ReactFlow, {
   Background,
@@ -23,7 +23,7 @@ const initialNodes = [
 const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
 
 export const FlowPanel = () => {
-  const nodeTypes = useMemo(() => ({ command: Command }), []);
+  const nodeTypes = useMemo(() => orchNodeTypes, []);
 
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
