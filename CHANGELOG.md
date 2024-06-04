@@ -1,5 +1,14 @@
 # @stage-lib/flow-kit
 
+## 0.2.0
+
+### Minor Changes
+
+- ✨ new navigation node (go to folder)
+
+  - 🍱 new icons for navigation pack nodes
+  - ✨ new button component
+
 ## 0.1.0
 
 ### Minor Changes
