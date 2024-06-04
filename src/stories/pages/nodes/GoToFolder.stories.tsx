@@ -1,32 +1,41 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import { FlowPanel } from "@/components";
-import { Container } from "../components/Container";
+import { GoToFolder } from "@/nodes";
 import { ReactFlowProvider } from "reactflow";
+import { Center } from "../../components/Center";
 
 const meta: Meta = {
-  title: "Modules/FlowPanel",
-  component: FlowPanel,
+  title: "Nodes/GoToFolder",
+  component: GoToFolder,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {},
-  args: { onClick: fn() },
   decorators: [
     (Story) => (
       <ReactFlowProvider>
-        <Container>
+        <Center>
           <Story />
-        </Container>
+        </Center>
       </ReactFlowProvider>
     ),
   ],
-} satisfies Meta<typeof FlowPanel>;
+} satisfies Meta<typeof GoToFolder>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    data: {
+      path: "",
+    },
+  },
+};
+
+export const WithPath: Story = {
+  args: {
+    data: { path: "user/desktop/workspace" },
+  },
 };

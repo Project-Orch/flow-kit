@@ -17,7 +17,13 @@ const initialNodes = [
     id: "2",
     position: { x: 0, y: 100 },
     data: { label: "2" },
-    type: "command",
+    type: "gotofolder",
+  },
+  {
+    id: "3",
+    position: { x: 0, y: 200 },
+    data: { path: "user/desktop/workspace" },
+    type: "gotofolder",
   },
 ];
 const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
@@ -29,7 +35,8 @@ export const FlowPanel = () => {
   const [edges, setEdges] = useState(initialEdges);
 
   const onNodesChange = useCallback(
-    (changes: any) => setNodes((nds) => applyNodeChanges(changes, nds) as any),
+    (changes: any) =>
+      setNodes((nds) => applyNodeChanges(changes, nds as any) as any),
     [setNodes]
   );
   const onEdgesChange = useCallback(
@@ -47,7 +54,7 @@ export const FlowPanel = () => {
         fitView
         nodes={nodes}
         edges={edges}
-        nodeTypes={nodeTypes}
+        nodeTypes={nodeTypes as any}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}

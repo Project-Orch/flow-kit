@@ -29,6 +29,13 @@ export const Title = styled("div", {
 
         borderRadius: "8px 8px 0 0",
       },
+      blue: {
+        bgColor: "blue.600",
+        borderWidth: "1px",
+        borderColor: "blue.500",
+
+        borderRadius: "8px 8px 0 0",
+      },
     },
   },
   defaultVariants: {
