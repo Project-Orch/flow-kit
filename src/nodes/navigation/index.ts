@@ -1,1 +1,1 @@
-export * from "./go-to-folder";
+export * from "./GoToFolder";
