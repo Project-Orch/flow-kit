@@ -24,6 +24,7 @@
       "@/components": ["./src/components"],
       "@/styled-system/*": ["./styled-system/*"],
       "@/nodes": ["./src/nodes"],
+      "@/edges": ["./src/edges"],
       "@/icons/*": ["./src/assets/icons/components/*"]
     }
   },
