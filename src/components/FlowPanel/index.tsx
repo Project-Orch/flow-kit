@@ -1,21 +1,29 @@
+import { orchEdgeTypes } from "@/edges";
 import { Command, orchNodeTypes } from "@/nodes";
 import { useCallback, useMemo, useState } from "react";
 import ReactFlow, {
   Background,
   BackgroundVariant,
   Controls,
+  Edge,
   MiniMap,
+  Node,
   addEdge,
   applyEdgeChanges,
   applyNodeChanges,
 } from "reactflow";
 import "reactflow/dist/style.css";
 
-const initialNodes = [
-  { id: "1", position: { x: 0, y: 0 }, data: { label: "1" }, type: "command" },
+const initialNodes: Node[] = [
+  {
+    id: "1",
+    position: { x: 0, y: 100 },
+    data: { label: "1" },
+    type: "command",
+  },
   {
     id: "2",
-    position: { x: 0, y: 100 },
+    position: { x: 0, y: 0 },
     data: { label: "2" },
     type: "gotofolder",
   },
@@ -26,10 +34,11 @@ const initialNodes = [
     type: "gotofolder",
   },
 ];
-const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
+const initialEdges: Edge[] = [];
 
 export const FlowPanel = () => {
   const nodeTypes = useMemo(() => orchNodeTypes, []);
+  const edgeTypes = useMemo(() => orchEdgeTypes, []);
 
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
@@ -54,7 +63,8 @@ export const FlowPanel = () => {
         fitView
         nodes={nodes}
         edges={edges}
-        nodeTypes={nodeTypes as any}
+        nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
@@ -64,7 +74,7 @@ export const FlowPanel = () => {
         <Background
           color="#292929"
           variant={BackgroundVariant.Dots}
-          gap={12}
+          gap={14}
           size={1}
         />
       </ReactFlow>
