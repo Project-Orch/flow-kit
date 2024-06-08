@@ -1,16 +1,12 @@
-import { ComponentProps } from "react";
 import { Command } from "./command";
 import { GoToFolder } from "./navigation";
+import { NodeTypes } from "reactflow";
 
 export * from "./command";
 export * from "./navigation";
+export * from "./hooks";
 
-interface IOrchNodeTypes {
-  command: () => JSX.Element;
-  gotofolder: (args: ComponentProps<typeof GoToFolder>) => JSX.Element;
-}
-
-export const orchNodeTypes: IOrchNodeTypes = {
+export const orchNodeTypes: NodeTypes = {
   command: Command,
   gotofolder: GoToFolder,
 };
