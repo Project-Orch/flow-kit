@@ -6,6 +6,23 @@ export const Container = styled("div", {
     flexDir: "column",
     borderRadius: "8px",
   },
+  defaultVariants: {
+    scheme: "purple",
+  },
+  variants: {
+    scheme: {
+      purple: {
+        _hover: {
+          boxShadow: "0 0 6px 2px rgba(99, 78, 215, 0.08)",
+        },
+      },
+      blue: {
+        _hover: {
+          boxShadow: "0 0 6px 2px rgba(4, 114, 241, 0.08)",
+        },
+      },
+    },
+  },
 });
 
 export const Title = styled("div", {
