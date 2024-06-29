@@ -1,5 +1,11 @@
 # @stage-lib/flow-kit
 
+## 0.3.1
+
+### Patch Changes
+
+- adjustments for build and publish on npm
+
 ## 0.3.0
 
 ### Minor Changes

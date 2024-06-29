@@ -1,6 +1,6 @@
 {
   "name": "@stage-lib/flow-kit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -8,7 +8,7 @@
   "scripts": {
     "prepare": "panda codegen",
     "generate:css": "panda cssgen --outfile dist/styles.css",
-    "build": "npm run prepare && npm run generate:css && tsup ./src/index.tsx --format esm,cjs --dts --external react",
+    "build": "npm run prepare && tsup ./src/index.ts --format esm,cjs --dts --external react && npm run generate:css",
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
     "storybook": "npm run prepare && storybook dev -p 6006",
     "build-storybook": "storybook build",

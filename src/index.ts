@@ -1,1 +1,1 @@
-export * from "./components";
+export { FlowPanel } from "./components";

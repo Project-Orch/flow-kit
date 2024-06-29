@@ -1,3 +1,6 @@
+import { orchEdgeTypes } from "@/edges";
+import { orchNodeTypes } from "@/nodes";
+import { useMemo } from "react";
 import ReactFlow, {
   Background,
   BackgroundVariant,
@@ -5,19 +8,21 @@ import ReactFlow, {
 } from "reactflow";
 import "reactflow/dist/style.css";
 
-let id = 0;
-const getId = () => `dndnode_${id++}`;
+export const FlowPanel = ({
+  ...rest
+}: Omit<ReactFlowProps, "nodeTypes" | "edgeTypes">) => {
+  const nodeTypes = useMemo(() => orchNodeTypes, []);
+  const edgeTypes = useMemo(() => orchEdgeTypes, []);
 
-export const FlowPanel = ({ ...rest }: ReactFlowProps) => {
   return (
     <>
-      <ReactFlow fitView {...rest}>
+      <ReactFlow fitView nodeTypes={nodeTypes} edgeTypes={edgeTypes} {...rest}>
         {/* <Controls />
         <MiniMap /> */}
         <Background
           color="#292929"
           variant={BackgroundVariant.Dots}
-          gap={20}
+          gap={24}
           size={2}
         />
       </ReactFlow>
