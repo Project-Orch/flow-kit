@@ -18,6 +18,7 @@ const meta: Meta = {
       <ReactFlowProvider>
         <Container>
           <Story />
+          {/* <Sidebar /> */}
         </Container>
       </ReactFlowProvider>
     ),

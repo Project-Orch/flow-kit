@@ -1,4 +1,4 @@
-import { BaseEdge, EdgeProps, getSmoothStepPath } from "reactflow";
+import { BaseEdge, EdgeProps, MarkerType, getSmoothStepPath } from "reactflow";
 
 export default function ArrowEdge({
   id,
@@ -16,7 +16,12 @@ export default function ArrowEdge({
 
   return (
     <>
-      <BaseEdge id={id} path={edgePath} />
+      <BaseEdge
+        style={{ strokeWidth: "2px", stroke: "#858585" }}
+        id={id}
+        path={edgePath}
+        markerEnd={MarkerType.ArrowClosed}
+      />
     </>
   );
 }
