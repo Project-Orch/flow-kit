@@ -1,5 +1,11 @@
 # @stage-lib/flow-kit
 
+## 0.4.1
+
+### Patch Changes
+
+- adjust wrapper
+
 ## 0.4.0
 
 ### Minor Changes
