@@ -1,5 +1,15 @@
 # @stage-lib/flow-kit
 
+## 0.4.0
+
+### Minor Changes
+
+- New function to drag n drop nodes
+
+  - New model for flow panel
+  - New sidebar component for drag n drop
+  - adjust container
+
 ## 0.3.1
 
 ### Patch Changes

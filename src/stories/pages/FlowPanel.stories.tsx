@@ -3,6 +3,7 @@ import { fn } from "@storybook/test";
 import { FlowPanel } from "@/components";
 import { Container } from "../components/Container";
 import { ReactFlowProvider } from "reactflow";
+import { Sidebar } from "../components/Sidebar";
 
 const meta: Meta = {
   title: "Modules/FlowPanel",
@@ -18,7 +19,7 @@ const meta: Meta = {
       <ReactFlowProvider>
         <Container>
           <Story />
-          {/* <Sidebar /> */}
+          <Sidebar />
         </Container>
       </ReactFlowProvider>
     ),

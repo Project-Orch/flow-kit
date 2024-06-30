@@ -10,6 +10,7 @@ export const Container = ({ children }: IContainer) => {
     <div
       className={css({
         display: "flex",
+        flexDir: "column",
         flex: 1,
         height: "screen",
         width: "screen",
