@@ -5,16 +5,14 @@ import ReactFlow, {
   Background,
   BackgroundVariant,
   Node,
-  ReactFlowProps,
-  addEdge,
-  useEdgesState,
-  useNodesState,
   useReactFlow,
 } from "reactflow";
 import "reactflow/dist/style.css";
 import { IFlowPanel } from "./model";
+import { css } from "@/styled-system/css";
 
 export const FlowPanel = ({ onDropNewNode, ...rest }: IFlowPanel) => {
+  const reactFlowWrapper = useRef(null);
   const nodeTypes = useMemo(() => orchNodeTypes, []);
   const edgeTypes = useMemo(() => orchEdgeTypes, []);
 
@@ -53,7 +51,10 @@ export const FlowPanel = ({ onDropNewNode, ...rest }: IFlowPanel) => {
   );
 
   return (
-    <>
+    <div
+      ref={reactFlowWrapper}
+      className={css({ display: "flex", w: "100%", h: "100%" })}
+    >
       <ReactFlow
         {...rest}
         onDrop={onDrop}
@@ -69,6 +70,6 @@ export const FlowPanel = ({ onDropNewNode, ...rest }: IFlowPanel) => {
           size={2}
         />
       </ReactFlow>
-    </>
+    </div>
   );
 };
