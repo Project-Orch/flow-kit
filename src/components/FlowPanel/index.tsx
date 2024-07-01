@@ -1,13 +1,8 @@
+import "reactflow/dist/style.css";
 import { orchEdgeTypes } from "@/edges";
 import { orchNodeTypes } from "@/nodes";
 import { useCallback, useMemo, useRef } from "react";
-import ReactFlow, {
-  Background,
-  BackgroundVariant,
-  Node,
-  useReactFlow,
-} from "reactflow";
-import "reactflow/dist/style.css";
+import ReactFlow, { Background, BackgroundVariant, Node } from "reactflow";
 import { IFlowPanel } from "./model";
 import { css } from "@/styled-system/css";
 
@@ -16,39 +11,29 @@ export const FlowPanel = ({ onDropNewNode, ...rest }: IFlowPanel) => {
   const nodeTypes = useMemo(() => orchNodeTypes, []);
   const edgeTypes = useMemo(() => orchEdgeTypes, []);
 
-  const { screenToFlowPosition } = useReactFlow();
-
   const onDragOver = useCallback((event: any) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
   }, []);
 
-  const onDrop = useCallback(
-    (event: any) => {
-      event.preventDefault();
+  const onDrop = useCallback((event: any) => {
+    event.preventDefault();
 
-      const type = event.dataTransfer.getData("application/reactflow");
+    const type = event.dataTransfer.getData("application/reactflow");
 
-      if (typeof type === "undefined" || !type) {
-        return;
-      }
+    if (typeof type === "undefined" || !type) {
+      return;
+    }
 
-      const position = screenToFlowPosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
+    const newNode: Node = {
+      id: crypto.randomUUID(),
+      type,
+      position: { x: 0, y: 0 },
+      data: {},
+    };
 
-      const newNode: Node = {
-        id: crypto.randomUUID(),
-        type,
-        position,
-        data: {},
-      };
-
-      onDropNewNode?.(newNode);
-    },
-    [screenToFlowPosition]
-  );
+    onDropNewNode?.(newNode);
+  }, []);
 
   return (
     <div
