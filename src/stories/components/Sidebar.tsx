@@ -21,7 +21,7 @@ const noderecipe = css({
 
 export const Sidebar = () => {
   const onDragStart = (event: any, nodeType: string) => {
-    event.dataTransfer.setData("application/reactflow", nodeType);
+    event.dataTransfer.setData("application/@xyflow/react", nodeType);
     event.dataTransfer.effectAllowed = "move";
   };
 

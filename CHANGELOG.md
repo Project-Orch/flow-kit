@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- remove function to translate x and y position from screen to reactflow
+- remove function to translate x and y position from screen to @xyflow/react
 
 ## 0.4.1
 

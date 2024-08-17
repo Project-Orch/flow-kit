@@ -44,6 +44,6 @@
   },
   "dependencies": {
     "@stage-lib/styled-system": "^0.2.2",
-    "reactflow": "^11.11.3"
+    "@xyflow/react": "^12.1.0"
   }
 }

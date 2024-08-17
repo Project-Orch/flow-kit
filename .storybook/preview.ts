@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 import "../src/stories/styles/index.css";
-import "reactflow/dist/style.css";
+import "@xyflow/react/dist/style.css";
 
 const preview: Preview = {
   parameters: {

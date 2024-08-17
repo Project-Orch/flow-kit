@@ -1,13 +1,14 @@
 import React from "react";
-import { useStore } from "reactflow";
+import { useConnection, useStore } from "@xyflow/react";
 
 interface IUseOrchNode {
   nodeId: string;
 }
 
 export const useOrchNode = ({ nodeId }: IUseOrchNode) => {
-  const connectionNodeId = useStore((state) => state.connectionNodeId);
-  const isTarget = connectionNodeId && connectionNodeId !== nodeId;
+  const connection = useConnection();
+
+  const isTarget = connection.inProgress && connection.fromNode.id !== nodeId;
 
   return {
     isTarget,

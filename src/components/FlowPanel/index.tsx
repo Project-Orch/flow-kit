@@ -1,8 +1,8 @@
-import "reactflow/dist/style.css";
+import "@xyflow/react/dist/style.css";
 import { orchEdgeTypes } from "@/edges";
 import { orchNodeTypes } from "@/nodes";
 import { useCallback, useMemo, useRef } from "react";
-import ReactFlow, { Background, BackgroundVariant, Node } from "reactflow";
+import { Background, BackgroundVariant, Node, ReactFlow } from "@xyflow/react";
 import { IFlowPanel } from "./model";
 import { css } from "@/styled-system/css";
 
@@ -19,7 +19,7 @@ export const FlowPanel = ({ onDropNewNode, ...rest }: IFlowPanel) => {
   const onDrop = useCallback((event: any) => {
     event.preventDefault();
 
-    const type = event.dataTransfer.getData("application/reactflow");
+    const type = event.dataTransfer.getData("application/@xyflow/react");
 
     if (typeof type === "undefined" || !type) {
       return;

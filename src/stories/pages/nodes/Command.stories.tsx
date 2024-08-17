@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Command } from "@/nodes";
-import { ReactFlowProvider } from "reactflow";
+import { ReactFlowProvider } from "@xyflow/react";
 import { Center } from "../../components/Center";
 
-const meta = {
+const meta: Meta = {
   title: "Nodes/Command",
   component: Command,
   parameters: {
@@ -12,7 +12,7 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {},
-  args: { onClick: fn() },
+  // args: { onClick: fn() },
   decorators: [
     (Story) => (
       <ReactFlowProvider>

@@ -1,5 +1,5 @@
 @layer reset, base, tokens, recipes, utilities;
-@import url('reactflow/dist/style.css');
+@import url('@xyflow/react/dist/style.css');
 
 .storybook-root {
   margin: 0;

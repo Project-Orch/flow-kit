@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { FlowPanel } from "@/components";
 import { Container } from "../components/Container";
-import { ReactFlowProvider } from "reactflow";
+import { ReactFlowProvider } from "@xyflow/react";
 import { Sidebar } from "../components/Sidebar";
 
 const meta: Meta = {

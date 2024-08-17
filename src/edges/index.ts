@@ -1,4 +1,4 @@
-import { EdgeTypes } from "reactflow";
+import { EdgeTypes } from "@xyflow/react";
 import ArrowEdge from "./Arrow";
 
 export * from "./Arrow";

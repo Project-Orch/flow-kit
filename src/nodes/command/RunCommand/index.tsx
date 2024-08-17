@@ -1,7 +1,7 @@
 import { Node } from "@/components";
 import { TerminalWindow } from "@/icons/TerminalWindow";
 import { CommandInput } from "@/components";
-import { Handle, NodeProps, Position } from "reactflow";
+import { Handle, NodeProps, Position } from "@xyflow/react";
 import { useOrchNode } from "@/nodes";
 import { bottomHandleStyle, topHandleStyle } from "./styles";
 

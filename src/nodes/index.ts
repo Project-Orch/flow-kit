@@ -1,6 +1,6 @@
 import { Command } from "./command";
 import { GoToFolder } from "./navigation";
-import { NodeTypes } from "reactflow";
+import { NodeTypes } from "@xyflow/react";
 
 export * from "./command";
 export * from "./navigation";

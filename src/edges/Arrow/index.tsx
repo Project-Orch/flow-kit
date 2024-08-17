@@ -1,4 +1,9 @@
-import { BaseEdge, EdgeProps, MarkerType, getSmoothStepPath } from "reactflow";
+import {
+  BaseEdge,
+  EdgeProps,
+  MarkerType,
+  getSmoothStepPath,
+} from "@xyflow/react";
 
 export default function ArrowEdge({
   id,

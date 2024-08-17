@@ -1,4 +1,4 @@
-import { Node, ReactFlowProps } from "reactflow";
+import { Node, ReactFlowProps } from "@xyflow/react";
 
 export interface IFlowPanel
   extends Omit<ReactFlowProps, "nodeTypes" | "edgeTypes"> {
