@@ -1,5 +1,11 @@
 # @stage-lib/flow-kit
 
+## 0.5.0
+
+### Minor Changes
+
+- ✨ change reactflow to xyflow
+
 ## 0.4.2
 
 ### Patch Changes
